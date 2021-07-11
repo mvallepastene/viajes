@@ -1,3 +1,19 @@
+/* Estilos por etiqueta */
+html {
+    scroll-behavior: smooth;
+}
+h1{
+    font-size: 26px;
+}
+hr{
+    border-top: 1px solid #17a4b8;
+}
+footer{
+    background-color: #17a4b8;
+}
+
+/* Estilos por clase */
+
 .navbar-expand-lg .navbar-collapse{
     justify-content: flex-end;
 }
@@ -6,25 +22,19 @@
     width: 100%;
     z-index: 1;
 }
-hr{
-    border-top: 1px solid cyan;
-}
 .icon-model{
-    background-color: cyan;
+    background-color: #17a4b8;
     width: 100%;
     padding: 10px 0;
     text-align: center;
 }
 .card-body{
-    background-color: cyan;
+    background-color: #17a4b8;
 }
 .carousel-control-next, .carousel-control-prev{
     width: 5%;
     height: 80%;
     margin-top: 10%;
-}
-footer{
-    background-color: cyan;
 }
 .separador{
     display: flex;
@@ -33,6 +43,33 @@ footer{
 .fab{
     background-color: white;
     padding: 5px;
-    color: cyan;
+    color: #17a4b8;
     margin: 0 10px;
+}
+.navbar-light .navbar-toggler{
+    border-color: #ffffff;
+}
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+.navbar-light .navbar-nav .nav-link{
+    color: #ffffff;
+    text-align: center;
+}
+#quienes-somos, .item2{
+    display: none;
+}
+
+/* Añadimos una media query para revertir el display none de las partes ocultas */
+
+@media (min-width: 992px){
+    #quienes-somos, .item2{
+        display: revert;
+    }
+    h1{
+        font-size: 32px;
+    }
+    .header-position{
+        position: fixed;
+    }
 }
